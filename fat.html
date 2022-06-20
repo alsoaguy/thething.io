@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+  background-color: black;
+}
+div {
+  width: 50vmin;
+  height: 50vmin;
+  background-color: yellow;
+  transform: skewY(20deg) skewX(20deg) translate(50%, 50%);
+  color: black;
+}
+
+div b {
+  font-size: 1000%;
+}
+</style>
+</head>
+<body>
+
+<div id="target"><b>jumpscare</b><e/div>
+<br>
+<script>
+const obj = document.getElementById("target");
+let amount = 1;
+function into() {
+  amount = amount + 0.1
+  obj.style.transform = "skew(" + amount + "deg, " + amount + "deg) translate(50%, 50%)";
+}
+setInterval(into, 10);
+</script>
+
+</body>
+</html>
